@@ -31,6 +31,7 @@ overflow-x:hidden;
 }
 
 
+
 /* HEADER */
 
 header{
@@ -51,6 +52,7 @@ overflow:hidden;
 }
 
 
+
 header:before{
 
 content:"";
@@ -67,6 +69,7 @@ opacity:.15;
 border-radius:50%;
 
 right:-80px;
+
 top:-80px;
 
 animation:rotate 8s infinite linear;
@@ -74,14 +77,19 @@ animation:rotate 8s infinite linear;
 }
 
 
+
 @keyframes rotate{
 
 from{
+
 transform:rotate(0deg);
+
 }
 
 to{
+
 transform:rotate(360deg);
+
 }
 
 }
@@ -107,6 +115,8 @@ align-items:center;
 justify-content:space-between;
 
 padding:70px 0;
+
+gap:30px;
 
 }
 
@@ -199,8 +209,8 @@ transform:translateY(-25px);
 
 
 
-/* CONTAINER */
 
+/* CONTENT */
 
 .container{
 
@@ -224,8 +234,7 @@ margin-bottom:35px;
 
 
 
-/* SERVICE */
-
+/* LAYANAN */
 
 .services{
 
@@ -253,37 +262,13 @@ box-shadow:
 
 transition:.4s;
 
-animation:show .6s;
-
-}
-
-
-
-@keyframes show{
-
-from{
-
-opacity:0;
-
-transform:translateY(30px);
-
-}
-
-to{
-
-opacity:1;
-
-}
-
 }
 
 
 
 .card:hover{
 
-transform:
-translateY(-12px)
-scale(1.02);
+transform:translateY(-10px);
 
 }
 
@@ -297,9 +282,27 @@ font-size:55px;
 
 
 
+.card h3{
+
+margin-top:15px;
+
+}
+
+
+
+.card p{
+
+margin:10px 0;
+
+color:#666;
+
+}
+
+
+
 .price{
 
-font-size:25px;
+font-size:22px;
 
 font-weight:bold;
 
@@ -334,7 +337,6 @@ cursor:pointer;
 
 /* FEATURE */
 
-
 .features{
 
 display:grid;
@@ -368,7 +370,6 @@ box-shadow:0 15px 30px #ddd;
 
 /* CART */
 
-
 .cart-button{
 
 position:fixed;
@@ -397,23 +398,7 @@ font-size:30px;
 
 cursor:pointer;
 
-box-shadow:0 10px 30px #aaa;
-
 z-index:99;
-
-animation:pulse 2s infinite;
-
-}
-
-
-
-@keyframes pulse{
-
-50%{
-
-transform:scale(1.1);
-
-}
 
 }
 
@@ -449,214 +434,6 @@ justify-content:center;
 
 /* MODAL */
 
-
-.modal{
-
-display:none;
-
-position:fixed;
-
-inset:0;
-
-background:rgba(0,0,0,.5);
-
-z-index:100;
-
-}
-
-
-
-.box{
-
-background:white;
-
-width:90%;
-
-max-width:420px;
-
-margin:80px auto;
-
-padding:30px;
-
-border-radius:35px;
-
-animation:up .4s;
-
-}
-
-
-
-@keyframes up{
-
-from{
-
-transform:translateY(50px);
-
-opacity:0;
-
-}
-
-}
-
-
-
-.cart-item{
-
-display:flex;
-
-justify-content:space-between;
-
-padding:12px;
-
-border-bottom:1px solid #eee;
-
-}
-
-
-
-.payment{
-
-margin-top:20px;
-
-}
-
-
-
-.payment label{
-
-display:block;
-
-background:#f1f7ff;
-
-padding:15px;
-
-border-radius:15px;
-
-margin:10px 0;
-
-cursor:pointer;
-
-}
-
-
-
-.payment input{
-
-margin-right:10px;
-
-}
-
-
-
-.total{
-
-font-size:25px;
-
-font-weight:bold;
-
-color:#006eff;
-
-margin:20px 0;
-
-}
-
-
-
-/* GAMBAR PEMBAYARAN */
-
-
-.payment-img{
-
-width:220px;
-
-margin-top:15px;
-
-border-radius:20px;
-
-box-shadow:
-0 10px 25px #ccc;
-
-}
-
-
-
-footer{
-
-background:#006eff;
-
-color:white;
-
-padding:25px;
-
-text-align:center;
-
-}
-
-
-
-.wa{
-
-position:fixed;
-
-bottom:20px;
-
-left:20px;
-
-background:#25d366;
-
-color:white;
-
-padding:15px 25px;
-
-border-radius:50px;
-
-text-decoration:none;
-
-font-weight:bold;
-
-}
-
-
-
-@media(max-width:768px){
-
-
-.hero{
-
-flex-direction:column;
-
-text-align:center;
-
-}
-
-
-
-.hero h1{
-
-font-size:38px;
-
-}
-
-
-
-.machine{
-
-font-size:100px;
-
-margin-top:30px;
-
-}
-
-
-}
-
-/* ===============================
-   RESPONSIVE FIX HP & IPAD
-================================ */
-
-
-/* MODAL RESPONSIVE */
-
 .modal{
 
 display:none;
@@ -683,60 +460,30 @@ background:white;
 
 width:100%;
 
-max-width:420px;
+max-width:430px;
 
 max-height:90vh;
 
 overflow-y:auto;
 
-margin:20px auto;
+margin:auto;
 
-padding:25px;
+padding:30px;
 
-border-radius:30px;
-
-}
-
-
-
-/* CART LIST SCROLL */
-
-#cartList{
-
-max-height:220px;
-
-overflow-y:auto;
+border-radius:35px;
 
 }
 
 
 
+/* RESPONSIVE IPAD */
 
-
-/* TABLET IPAD */
-
-@media (min-width:768px) and (max-width:1024px){
-
-
-header{
-
-padding:30px 5%;
-
-}
-
-
-
-.hero{
-
-gap:30px;
-
-}
-
+@media(min-width:768px) and (max-width:1024px){
 
 
 .hero h1{
 
-font-size:45px;
+font-size:42px;
 
 }
 
@@ -757,38 +504,28 @@ padding:40px 5%;
 }
 
 
-
 .services{
 
 grid-template-columns:repeat(2,1fr);
 
 }
 
-
-
-.box{
-
-max-width:500px;
-
-}
-
-
-
 }
 
 
 
 
-/* HP */
+
+/* RESPONSIVE HP */
 
 @media(max-width:767px){
 
 
 header{
 
-border-radius:0 0 35px 35px;
-
 padding:20px 5%;
+
+border-radius:0 0 35px 35px;
 
 }
 
@@ -803,8 +540,6 @@ font-size:24px;
 
 
 .hero{
-
-display:flex;
 
 flex-direction:column;
 
@@ -872,62 +607,12 @@ grid-template-columns:1fr 1fr;
 
 
 
-.card{
-
-padding:25px;
-
-}
-
-
-
-.cart-button{
-
-width:60px;
-
-height:60px;
-
-right:15px;
-
-bottom:80px;
-
-}
-
-
-
 .box{
 
 width:95%;
 
 padding:20px;
 
-border-radius:25px;
-
-}
-
-
-
-.payment label{
-
-font-size:15px;
-
-padding:13px;
-
-}
-
-
-
-.payment-img{
-
-width:180px;
-
-}
-
-
-
-.total{
-
-font-size:22px;
-
 }
 
 
@@ -935,34 +620,6 @@ font-size:22px;
 }
 
 
-/* HP KECIL */
-
-@media(max-width:380px){
-
-
-.features{
-
-grid-template-columns:1fr;
-
-}
-
-
-
-.hero h1{
-
-font-size:30px;
-
-}
-
-
-.box{
-
-padding:18px;
-
-}
-
-
-}
 </style>
 
 </head>
@@ -979,6 +636,7 @@ padding:18px;
 🫧 LaundryFresh
 
 </div>
+
 
 
 <div class="hero">
@@ -1020,6 +678,7 @@ Mulai Pesan
 </div>
 
 
+
 <div class="machine">
 
 🧺
@@ -1031,11 +690,16 @@ Mulai Pesan
 
 
 </header>
+
+
+
 <section class="container" id="layanan">
 
 
 <h2 class="title">
+
 Layanan Kami
+
 </h2>
 
 
@@ -1043,30 +707,41 @@ Layanan Kami
 <div class="services">
 
 
+
 <div class="card">
+
 
 <div class="icon">
 👕
 </div>
 
+
 <h3>
 Cuci Kering
 </h3>
 
+
 <p>
-Bersih tanpa setrika
+Cuci bersih tanpa setrika
 </p>
 
+
 <div class="price">
+
 Rp7.000/kg
+
 </div>
 
 
-<button onclick="addCart('Cuci Kering',7000)">
-+ Tambah
+<button onclick="addCart('Cuci Kering')">
+
++ Pilih
+
 </button>
 
+
 </div>
+
 
 
 
@@ -1085,21 +760,26 @@ Cuci Setrika
 
 
 <p>
-Siap pakai langsung
+Cuci + setrika siap pakai
 </p>
 
 
 <div class="price">
+
 Rp10.000/kg
+
 </div>
 
 
-<button onclick="addCart('Cuci Setrika',10000)">
-+ Tambah
+<button onclick="addCart('Cuci Setrika')">
+
++ Pilih
+
 </button>
 
 
 </div>
+
 
 
 
@@ -1118,79 +798,66 @@ Express
 
 
 <p>
-Selesai 1 hari
+Selesai lebih cepat
 </p>
 
 
 <div class="price">
+
 Rp15.000/kg
+
 </div>
 
 
-<button onclick="addCart('Express',15000)">
-+ Tambah
+<button onclick="addCart('Express')">
+
++ Pilih
+
 </button>
 
 
 </div>
 
 
+
 </div>
+<!-- FEATURE -->
 
 <br><br>
-
-
 
 <h2 class="title">
 Kenapa Kami?
 </h2>
 
 
-
 <div class="features">
 
 
 <div class="feature">
-
 🚚
-
 <br>
-
 Jemput Antar
-
 </div>
 
 
 <div class="feature">
-
 🌸
-
 <br>
-
 Wangi Premium
-
 </div>
 
 
 <div class="feature">
-
 ⚡
-
 <br>
-
 Cepat
-
 </div>
 
 
 <div class="feature">
-
 🔒
-
 <br>
-
 Aman
-
 </div>
 
 
@@ -1203,7 +870,8 @@ Aman
 
 
 
-<!-- FLOATING CART -->
+<!-- FLOAT CART -->
+
 
 <div class="cart-button" onclick="openCart()">
 
@@ -1221,7 +889,7 @@ Aman
 
 
 
-<!-- MODAL CART -->
+<!-- MODAL -->
 
 <div class="modal" id="modal">
 
@@ -1230,47 +898,123 @@ Aman
 
 
 <h2>
-
-🛒 Pesanan
-
+🧺 Pesanan Laundry
 </h2>
 
 
 <br>
 
 
+
 <div id="cartList">
 
-Belum ada pesanan
+Belum ada layanan dipilih
 
 </div>
 
 
 
-<div class="total" id="total">
+<div class="total">
 
-Total Rp0
+Harga dihitung setelah penimbangan
 
 </div>
 
 
+
+
+
+<hr>
+
+<br>
 
 
 <h3>
-
-Metode Pembayaran
-
+Data Pelanggan
 </h3>
 
+
+
+<br>
+
+
+<input 
+type="text"
+id="nama"
+placeholder="Nama pelanggan"
+style="
+width:100%;
+padding:14px;
+border-radius:15px;
+border:1px solid #ddd;
+margin-bottom:10px;
+">
+
+
+
+<input 
+type="text"
+id="alamat"
+placeholder="Alamat jemput"
+style="
+width:100%;
+padding:14px;
+border-radius:15px;
+border:1px solid #ddd;
+margin-bottom:10px;
+">
+
+
+
+<input 
+type="text"
+id="telepon"
+placeholder="Nomor WhatsApp"
+style="
+width:100%;
+padding:14px;
+border-radius:15px;
+border:1px solid #ddd;
+">
+
+
+
+<br><br>
+
+
+<textarea
+id="catatan"
+placeholder="Catatan tambahan (opsional)"
+style="
+width:100%;
+height:80px;
+padding:14px;
+border-radius:15px;
+border:1px solid #ddd;
+resize:none;
+">
+
+</textarea>
+
+
+
+
+<br><br>
+
+
+<h3>
+Metode Pembayaran
+</h3>
 
 
 
 <div class="payment">
 
 
+
 <label>
 
-<input 
+<input
 type="radio"
 name="payment"
 value="QRIS"
@@ -1282,10 +1026,9 @@ onclick="showPaymentImage('qris')">
 
 
 
-
 <label>
 
-<input 
+<input
 type="radio"
 name="payment"
 value="Transfer Bank"
@@ -1300,7 +1043,7 @@ onclick="showPaymentImage('transfer')">
 
 <label>
 
-<input 
+<input
 type="radio"
 name="payment"
 value="Cash"
@@ -1312,18 +1055,19 @@ onclick="showPaymentImage('cash')">
 
 
 
-
-<!-- TEMPAT GAMBAR PEMBAYARAN -->
-
-<div id="paymentImage"
-style="text-align:center">
-
 </div>
 
 
 
-</div>
 
+<div 
+id="paymentImage"
+style="
+text-align:center;
+margin-top:15px;
+">
+
+</div>
 
 
 
@@ -1333,7 +1077,7 @@ style="text-align:center">
 
 <button onclick="checkout()">
 
-📲 Checkout WhatsApp
+📲 Kirim Pesanan WhatsApp
 
 </button>
 
@@ -1344,8 +1088,10 @@ style="text-align:center">
 
 
 <button 
-style="background:#777"
-onclick="closeCart()">
+onclick="closeCart()"
+style="
+background:#777;
+">
 
 Tutup
 
@@ -1362,8 +1108,6 @@ Tutup
 
 
 
-
-
 <a class="wa"
 href="https://wa.me/628123456789">
 
@@ -1375,17 +1119,11 @@ href="https://wa.me/628123456789">
 
 
 
-
 <footer>
 
 LaundryFresh © 2026
 
 </footer>
-
-
-
-
-
 <script>
 
 
@@ -1393,25 +1131,20 @@ let cart=[];
 
 
 
-// TAMBAH PRODUK
 
-function addCart(nama,harga){
+// TAMBAH LAYANAN
+
+function addCart(nama){
 
 
-cart.push({
-
-nama:nama,
-
-harga:harga
-
-});
+cart.push(nama);
 
 
 updateCart();
 
 
 showToast(
-nama+" ditambahkan"
+nama+" dipilih"
 );
 
 
@@ -1421,7 +1154,8 @@ nama+" ditambahkan"
 
 
 
-// UPDATE CART
+
+// UPDATE KERANJANG
 
 
 function updateCart(){
@@ -1430,11 +1164,6 @@ function updateCart(){
 let list=document.getElementById("cartList");
 
 let badge=document.getElementById("badge");
-
-let totalBox=document.getElementById("total");
-
-
-let total=0;
 
 
 
@@ -1445,10 +1174,9 @@ badge.innerHTML=cart.length;
 if(cart.length==0){
 
 
-list.innerHTML="Belum ada pesanan";
+list.innerHTML=
 
-
-totalBox.innerHTML="Total Rp0";
+"Belum ada layanan dipilih";
 
 
 return;
@@ -1463,45 +1191,64 @@ list.innerHTML="";
 
 
 
-cart.forEach((item)=>{
+cart.forEach((item,index)=>{
 
 
 list.innerHTML+=`
 
-
 <div class="cart-item">
+
 
 <span>
 
-🧺 ${item.nama}
+🧺 ${item}
 
 </span>
 
 
-<b>
+<button
 
-Rp${item.harga.toLocaleString()}
+onclick="removeCart(${index})"
 
-</b>
+style="
+background:red;
+padding:6px 12px;
+font-size:12px;
+">
+
+Hapus
+
+</button>
 
 
 </div>
 
-
 `;
 
-
-
-total+=item.harga;
 
 
 });
 
 
 
-totalBox.innerHTML=
+}
 
-"Total Rp"+total.toLocaleString();
+
+
+
+
+
+
+// HAPUS PESANAN
+
+
+function removeCart(index){
+
+
+cart.splice(index,1);
+
+
+updateCart();
 
 
 }
@@ -1527,6 +1274,10 @@ document.getElementById("modal")
 
 
 
+
+// TUTUP CART
+
+
 function closeCart(){
 
 
@@ -1535,6 +1286,7 @@ document.getElementById("modal")
 
 
 }
+
 
 
 
@@ -1563,7 +1315,7 @@ Scan QRIS Pembayaran
 </h4>
 
 
-<img 
+<img
 
 src="img/qris.png"
 
@@ -1602,7 +1354,6 @@ class="payment-img">
 }
 
 
-
 else{
 
 
@@ -1633,7 +1384,61 @@ if(cart.length==0){
 
 alert(
 
-"Keranjang masih kosong"
+"Pilih layanan terlebih dahulu"
+
+);
+
+
+return;
+
+}
+
+
+
+let nama=
+
+document.getElementById("nama").value;
+
+
+
+let alamat=
+
+document.getElementById("alamat").value;
+
+
+
+let telepon=
+
+document.getElementById("telepon").value;
+
+
+
+let catatan=
+
+document.getElementById("catatan").value;
+
+
+
+
+
+let payment=
+
+document.querySelector(
+
+'input[name="payment"]:checked'
+
+);
+
+
+
+
+
+if(!nama || !alamat || !telepon){
+
+
+alert(
+
+"Lengkapi data pelanggan"
 
 );
 
@@ -1643,13 +1448,6 @@ return;
 
 }
 
-
-
-let payment=
-
-document.querySelector(
-'input[name="payment"]:checked'
-);
 
 
 
@@ -1670,14 +1468,16 @@ return;
 
 
 
+
+
 let pesan=
 
-"Halo LaundryFresh 👋%0A"+
-"Saya ingin melakukan order:%0A%0A";
+
+"Halo LaundryFresh 👋%0A%0A"+
+
+"Saya ingin pesan laundry:%0A%0A";
 
 
-
-let total=0;
 
 
 
@@ -1686,37 +1486,53 @@ cart.forEach(item=>{
 
 pesan+=
 
-"🧺 "+
-item.nama+
-" - Rp"+
-item.harga.toLocaleString()+
-"%0A";
-
-
-total+=item.harga;
+"🧺 "+item+"%0A";
 
 
 });
 
 
 
-pesan+=
-
-"%0A💰 Total : Rp"+
-total.toLocaleString();
-
 
 
 pesan+=
 
-"%0A💳 Pembayaran : "+
-payment.value;
+
+"%0A👤 Nama: "+nama+
+
+"%0A📍 Alamat: "+alamat+
+
+"%0A📞 WhatsApp: "+telepon+
+
+"%0A💳 Pembayaran: "+payment.value+
+
+"%0A";
+
+
+
+
+
+if(catatan){
+
+
+pesan+=
+
+"%0A📝 Catatan: "+catatan;
+
+
+}
+
+
 
 
 
 pesan+=
 
-"%0A%0AMohon diproses ya 🙏";
+
+"%0A%0AHarga akan dihitung setelah penimbangan.%0A"+
+
+"Mohon diproses 🙏";
+
 
 
 
@@ -1737,16 +1553,46 @@ window.open(
 
 
 
+// CLOSE KLIK LUAR
+
+
+window.onclick=function(event){
+
+
+let modal=document.getElementById("modal");
+
+
+if(event.target==modal){
+
+
+closeCart();
+
+
+}
+
+
+}
+
+
+
+
+
+
+
+
 // TOAST
 
 
 function showToast(text){
 
 
+
 let toast=document.createElement("div");
 
 
+
 toast.innerHTML=text;
+
 
 
 toast.style.position="fixed";
@@ -1788,8 +1634,3 @@ toast.remove();
 
 
 </script>
-
-
-</body>
-
-</html>
